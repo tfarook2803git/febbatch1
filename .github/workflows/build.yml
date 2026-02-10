@@ -68,6 +68,7 @@ jobs:
   deploytouat:
     runs-on: ubuntu-latest
     needs: deploytodev
+    if: github.ref == 'refs/heads/uat'
     name: Deploy to ${{ inputs.environment }} environment
     environment: uat
     strategy:
@@ -80,7 +81,8 @@ jobs:
     
   deploytoprod:
     runs-on: ubuntu-latest
-    needs: deploytouat
+    # needs: deploytouat
+    if: github.ref == 'refs/heads/main'
     name: Deploy to ${{ inputs.environment }} environment
     environment: prod
     strategy:

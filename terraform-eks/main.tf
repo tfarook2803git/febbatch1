@@ -72,7 +72,7 @@ resource "aws_eks_addon" "kube_proxy" {
   addon_name   = "kube-proxy"
 }
 
-resource "aws_eks_addon" "coredns" {
-  cluster_name = aws_eks_cluster.main.name
-  addon_name   = "coredns"
-}
+# resource "aws_eks_addon" "coredns" {
+#   cluster_name = aws_eks_cluster.main.name
+#   addon_name   = "coredns"
+# }

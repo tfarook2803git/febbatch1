@@ -1,11 +1,11 @@
 # Cluster Name - Update this for your demo
-cluster_name = "demo-eks-cluster"
+cluster_name = "demo-eks-cluster1"
 
 # AWS Region
 region = "us-east-1"
 
 # Kubernetes Version
-kubernetes_version = "1.28"
+kubernetes_version = "1.32"
 
 # VPC Configuration
 vpc_cidr           = "10.0.0.0/16"

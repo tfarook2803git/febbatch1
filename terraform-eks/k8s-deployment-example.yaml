@@ -17,9 +17,9 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: ${ECR_REPOSITORY_URL}:latest  # Replace with terraform output ecr_repository_url
+        image: nginx  # Replace with terraform output ecr_repository_url
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         resources:
           requests:
             memory: "128Mi"
@@ -39,4 +39,4 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8080
+      targetPort: 80
